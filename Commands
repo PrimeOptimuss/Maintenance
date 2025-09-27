@@ -1,0 +1,60 @@
+pacman -Syu UPDATE PKGS
+
+yay -Syu UPDATE YAY PKGS
+
+sudo pacman -Qk DETAILED LIST MISSING FILES
+
+pacman -Qdt SEARCH FOR DUPES
+
+pacaman -Qtdq LIST ORPHANED PKGS
+
+pacman -Qent LIST EXPLICITLY INSTALLED PKGS
+
+pacman -Qm LIST NON PACMAN PKGS
+
+pacman -Qe LIST INSTALLED PKGS
+
+sudo paccache -rk0 CLEAR EVERYPKG CACHE
+
+sudo pacman -Qk | grep -v '0 missing files'
+CHECK MISSING FILES
+
+sudo pacman -Scc
+CLEAR ALL CACHE
+
+sudo paccache -rk1
+CLEAR PKGS CACHE EXCEPT CURRENT
+
+sudo paccache -ruk0
+CLEAR UNISTALLED PKGS CACHE
+
+journalctl -p 3 -xb show errors
+
+systemctl --failed FAILED SERVICES
+
+sudo journalctl --vacuum-size=200M
+KEEP 200MB WORTH OF JOURNALS
+
+for temp
+sudo rm -rf ~/.cache/*
+sudo rm -rf /var/log/*.old
+sudo rm -rf /tmp/*
+sudo rm -rf /var/tmp/*
+
+find -L / -type l
+CHECK FOR BROKEN SYMLINKS
+
+yay -Sc kill cache
+
+yay -Yc check orphaned pkgs
+
+yay -Sua search for updates
+
+yay -Qu OUTDATED PKGS
+
+fc-cache -r
+
+
+
+
+Sent from Proton Mail for Android.
